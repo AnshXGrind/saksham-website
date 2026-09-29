@@ -1,9 +1,0 @@
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; background: var(--bg); color: var(--ink); font-family: var(--sans); font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-body::selection { background: var(--ink); color: #fff; }
-a { color: inherit; text-decoration: none; }
-a, button { -webkit-tap-highlight-color: transparent; }
-.site-shell { overflow: hidden; }
-.eyebrow, .project-meta, .project-stack, .hero-note, .window-label, .lexi-header, .rail-board-label, .rail-node small, .rail-flow, .project-details span, .engineering-list span, .lab-list span, .lab-list em, .now-list span { font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em; }
-.eyebrow { color: #83837b; font-size: 10px; }

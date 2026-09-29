@@ -1,9 +1,0 @@
-.technical-eyebrow, .scene-label, .canvas-meta, .canvas-index, .illustration-caption, .orbit-project-meta, .project-preview b, .project-preview small, .discipline-list span, .lab-notebook span, .lab-notebook i, .enter-hint, .email-link { font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em; }
-.technical-eyebrow { color: var(--muted); font-size: 9px; }
-.scene-label { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 9px; }
-.scene-label span { color: var(--accent); }
-.scene-label strong { font-weight: 400; }
-.scene h1, .scene h2, .scene h3, .scene p { margin-top: 0; }
-.scene h1, .scene h2 { font-size: clamp(46px, 6.3vw, 92px); line-height: .86; letter-spacing: -.08em; font-weight: 700; }
-.scene h1 em, .scene h2 em { color: #898a81; font-style: normal; }
-.scene p { color: var(--muted); font-size: 14px; line-height: 1.7; }

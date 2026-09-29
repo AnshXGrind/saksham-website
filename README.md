@@ -1,20 +1,19 @@
-# Saksham Garg portfolio
+# Saksham Garg — vCard portfolio
 
-React + Vite portfolio for Saksham Garg, focused on machine learning, backend engineering, system design, software engineering, and hackathons.
+A personal portfolio for Saksham Garg, rebuilt from the CodeWithSadee vCard structure with the original static HTML, CSS, and JavaScript interaction model preserved.
 
 ## Run locally
 
-```bash
-npm install
-npm run dev
-```
-
-Open the local Vite URL shown in the terminal.
-
-## Production build
+Serve the repository with any static server, for example:
 
 ```bash
-npm run build
-npm run preview
+python3 -m http.server 4175
 ```
 
+Open `http://localhost:4175/`.
+
+## Focus
+
+Machine learning, backend engineering, system design, software engineering, AI/ML systems, and hackathons.
+
+The original MIT license and attribution remain in [LICENSE](LICENSE).

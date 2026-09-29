@@ -1,3 +1,0 @@
-import SceneLabel from '../common/SceneLabel';
-
-export default function AboutScene() { return <div className="scene-content about-content"><SceneLabel number="05">About</SceneLabel><div className="about-orbit-copy"><span className="technical-eyebrow">A SHORT PERSONAL NOTE</span><h2 id="about-title">The layer<br /><em>underneath.</em></h2><p>I’m a computer science student interested in how data moves, how services fail, where state lives, and how separate pieces become one useful product.</p><div className="about-notes"><span>Architecture</span><span>Data flow</span><span>APIs</span><span>Failure modes</span><span>Interfaces</span></div></div></div>; }

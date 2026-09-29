@@ -1,20 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f3f1eb" />
-  <meta name="description" content="Saksham Garg builds end-to-end systems across machine learning, backend engineering, and product development." />
-  <meta property="og:title" content="Saksham Garg — Machine Learning · Backend · Systems" />
-  <meta property="og:description" content="A personal portfolio of end-to-end software systems, ML products, and engineering experiments." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://saksham-main.vercel.app" />
-  <meta name="twitter:card" content="summary" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saksham Garg — Computer Science student working across machine learning, backend engineering, system design, and software engineering.">
+  <meta property="og:title" content="Saksham Garg — Machine Learning · Backend · Systems">
+  <meta property="og:description" content="A CodeWithSadee vCard portfolio rebuilt for Saksham Garg's engineering work.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0f0f0f">
   <title>Saksham Garg — Machine Learning · Backend · Systems</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111111'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3ESG%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='24' font-weight='700' text-anchor='middle' fill='%23f6d365'%3ESG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box"><div class="avatar-initials" aria-hidden="true">SG</div></figure>
+        <div class="info-content"><h1 class="name" title="Saksham Garg">Saksham Garg</h1><p class="title">Machine Learning · Backend · Systems</p></div>
+        <button class="info_more-btn" data-sidebar-btn><span>Show Contacts</span><ion-icon name="chevron-down"></ion-icon></button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item"><div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Email</p><a href="mailto:anshgarg2512@gmail.com" class="contact-link">anshgarg2512@gmail.com</a></div></li>
+          <li class="contact-item"><div class="icon-box"><ion-icon name="logo-github"></ion-icon></div><div class="contact-info"><p class="contact-title">GitHub</p><a href="https://github.com/AnshXGrind" class="contact-link" target="_blank" rel="noreferrer">AnshXGrind</a></div></li>
+          <li class="contact-item"><div class="icon-box"><ion-icon name="school-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Focus</p><span>ML · Backend · Systems</span></div></li>
+          <li class="contact-item"><div class="icon-box"><ion-icon name="code-slash-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Building</p><span>Projects and hackathons</span></div></li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list"><li class="social-item"><a href="https://github.com/AnshXGrind" class="social-link" target="_blank" rel="noreferrer" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a></li></ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar"><ul class="navbar-list">
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Engineering</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Lab</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+      </ul></nav>
+
+      <article class="about active" data-page="about">
+        <header><h2 class="h2 article-title">About me</h2></header>
+        <section class="about-text">
+          <p>I’m Saksham Garg, a Computer Science student working across machine learning, backend engineering, system design, and software engineering.</p>
+          <p>I like building end-to-end systems: understanding the data, shaping the model, designing the APIs, and making the product usable. Projects and hackathons are how I learn, test ideas, and get better at the whole loop.</p>
+        </section>
+        <section class="service"><h3 class="h3 service-title">What I’m doing</h3><ul class="service-list">
+          <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Backend engineering icon" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Machine Learning</h4><p class="service-item-text">Working with models, data, evaluation, and the systems around them.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="Backend systems icon" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Backend Engineering</h4><p class="service-item-text">Designing APIs, services, data flow, and reliable application foundations.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="System design icon" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">System Design</h4><p class="service-item-text">Breaking problems into boundaries, constraints, and decisions that can be tested.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-photo.svg" alt="Software engineering icon" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Software Engineering</h4><p class="service-item-text">Shipping coherent products across interfaces, services, and implementation details.</p></div></li>
+        </ul></section>
+        <section class="about-note"><h3 class="h3">Current direction</h3><p>AI/ML systems, distributed systems, production engineering, and hackathon building.</p></section>
+      </article>
+
+      <article class="resume" data-page="engineering">
+        <header><h2 class="h2 article-title">Engineering</h2></header>
+        <section class="timeline"><div class="title-wrapper"><div class="icon-box"><ion-icon name="layers-outline"></ion-icon></div><h3 class="h3">Areas I’m building depth in</h3></div><ol class="timeline-list">
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Machine Learning</h4><p class="timeline-text">Models, data, evaluation, and the path from an experiment to a usable system.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Backend Engineering</h4><p class="timeline-text">APIs, services, databases, state, and the failure modes around them.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">System Design</h4><p class="timeline-text">Architecture, operational constraints, tradeoffs, and clear interfaces between parts.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Software Engineering</h4><p class="timeline-text">Readable implementation and product thinking across the full build.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">AI/ML Systems</h4><p class="timeline-text">Connecting model behavior to backend workflows and real product decisions.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Hackathons</h4><p class="timeline-text">Short feedback loops for learning, building, and making tradeoffs visible.</p></li>
+        </ol></section>
+      </article>
+
+      <article class="portfolio" data-page="projects">
+        <header><h2 class="h2 article-title">Projects</h2></header>
+        <section class="projects">
+          <ul class="filter-list"><li class="filter-item"><button class="active" data-filter-btn>All</button></li><li class="filter-item"><button data-filter-btn>Machine Learning</button></li><li class="filter-item"><button data-filter-btn>Backend</button></li><li class="filter-item"><button data-filter-btn>Systems</button></li><li class="filter-item"><button data-filter-btn>Product</button></li></ul>
+          <div class="filter-select-box"><button class="filter-select" data-select><div class="select-value" data-selecct-value>All</div><div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div></button><ul class="select-list"><li class="select-item"><button data-select-item>All</button></li><li class="select-item"><button data-select-item>Machine Learning</button></li><li class="select-item"><button data-select-item>Backend</button></li><li class="select-item"><button data-select-item>Systems</button></li><li class="select-item"><button data-select-item>Product</button></li></ul></div>
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="machine-learning backend systems"><a href="#rail-yojna" data-project-item data-project-title="Rail-Yojna" data-project-category="Machine Learning / Backend / Systems / Optimization" data-project-description="AI-assisted railway maintenance planning system combining risk prediction, maintenance planning, operational constraints, optimization, and human review." data-project-link="https://github.com/AnshXGrind/Rail-Yojna"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><div class="project-art rail-art" role="img" aria-label="Rail-Yojna data to recommendation flow"></div></figure><h3 class="project-title">Rail-Yojna</h3><p class="project-category">Machine Learning · Backend · Systems</p></a></li>
+            <li class="project-item active" data-filter-item data-category="machine-learning product"><a href="#lexiscan" data-project-item data-project-title="LexiScan" data-project-category="Product / Machine Learning / Frontend" data-project-description="Interactive learning-difficulty screening and assessment platform with assessments, result analysis, progress tracking, and guidance." data-project-link="https://github.com/AnshXGrind/lexiscan"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><div class="project-art lexi-art" role="img" aria-label="LexiScan assessment interface"></div></figure><h3 class="project-title">LexiScan</h3><p class="project-category">Product · Machine Learning · Frontend</p></a></li>
+          </ul>
+        </section>
+        <div class="modal-container" data-project-modal><div class="overlay" data-project-overlay></div><section class="project-modal"><button class="modal-close-btn" data-project-close aria-label="Close project details"><ion-icon name="close-outline"></ion-icon></button><h3 class="h3" data-project-modal-title>Project</h3><p class="project-modal-category" data-project-modal-category></p><p class="project-modal-description" data-project-modal-description></p><a class="form-btn project-modal-link" data-project-modal-link href="#" target="_blank" rel="noreferrer"><ion-icon name="logo-github"></ion-icon><span>View on GitHub</span></a></section></div>
+      </article>
+
+      <article class="blog" data-page="lab">
+        <header><h2 class="h2 article-title">Lab</h2></header>
+        <section class="blog-posts"><ul class="blog-posts-list">
+          <li class="blog-post-item"><a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer"><div class="blog-content"><div class="blog-meta"><p class="blog-category">01 / Experiments</p></div><h3 class="h3 blog-item-title">RAG experiments</h3><p class="blog-text">Small retrieval and evaluation experiments kept secondary to the flagship builds.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer"><div class="blog-content"><div class="blog-meta"><p class="blog-category">02 / Foundations</p></div><h3 class="h3 blog-item-title">ML notebooks</h3><p class="blog-text">Working through models, data, and the fundamentals behind useful systems.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer"><div class="blog-content"><div class="blog-meta"><p class="blog-category">03 / Vision</p></div><h3 class="h3 blog-item-title">Computer vision</h3><p class="blog-text">Focused explorations of visual data, models, and implementation details.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer"><div class="blog-content"><div class="blog-meta"><p class="blog-category">04 / Practice</p></div><h3 class="h3 blog-item-title">DSA / algorithms</h3><p class="blog-text">Practice repositories that keep problem solving and implementation sharp.</p></div></a></li>
+        </ul></section>
+      </article>
+
+      <article class="contact" data-page="contact">
+        <header><h2 class="h2 article-title">Contact</h2></header>
+        <section class="contact-intro"><h3 class="h3">Let’s build something useful.</h3><p>For thoughtful collaborations, hackathons, or a good technical conversation.</p></section>
+        <section class="contact-links-panel"><a href="mailto:anshgarg2512@gmail.com"><ion-icon name="mail-outline"></ion-icon><span>anshgarg2512@gmail.com</span></a><a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer"><ion-icon name="logo-github"></ion-icon><span>GitHub / AnshXGrind</span></a></section>
+      </article>
+    </div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
