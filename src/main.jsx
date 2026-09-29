@@ -2,47 +2,22 @@ import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const projects = [
-  {
-    number: '01',
-    year: '2026',
-    title: 'Rail-Yojna',
-    subtitle: 'AI-assisted railway maintenance & planning.',
-    description:
-      'An end-to-end decision-support system combining risk prediction, maintenance planning, optimization, operational constraints, safety evaluation, and human review.',
-    tech: 'Python · FastAPI · React · ML · OR-Tools',
-    href: 'https://github.com/AnshXGrind/Rail-Yojna',
-    visual: 'rail',
-  },
-  {
-    number: '02',
-    year: '2026',
-    title: 'LexiScan',
-    subtitle: 'Accessible screening, designed as a product.',
-    description:
-      'An interactive platform for learning-difficulty screening with cognitive assessments, results analysis, progress tracking, and personalized guidance.',
-    tech: 'TypeScript · React · Vite · Tailwind',
-    href: 'https://github.com/AnshXGrind/lexiscan',
-    visual: 'lexi',
-  },
-];
-
 const focus = [
   'Machine Learning',
   'Backend Engineering',
   'System Design',
-  'AI Systems',
+  'ML Systems',
+  'Software Engineering',
   'Hackathons',
-  'Onchain',
+  'AI Architecture',
+  'AI Agent Design',
 ];
 
-const stack = [
-  ['Languages', 'Python · C++ · TypeScript · JavaScript'],
-  ['AI / ML', 'PyTorch · scikit-learn · Pandas · NumPy · RAG'],
-  ['Backend', 'FastAPI · REST · Databases · APIs · System Design'],
-  ['Frontend', 'React · Vite · Tailwind CSS'],
-  ['Infrastructure', 'Docker · Linux · Git · Vercel'],
-  ['Exploring', 'Ethereum · Solidity · Smart Contracts · AI Agents'],
+const now = [
+  'System design and backend architecture',
+  'Machine learning systems and evaluation',
+  'Distributed systems and production engineering',
+  'Hackathon preparation and fast product loops',
 ];
 
 function WindowChrome({ label }) {
@@ -62,28 +37,14 @@ function RailVisual() {
   return (
     <div className="project-visual rail-visual">
       <WindowChrome label="rail-yojna / control-room" />
-      <div className="rail-board">
-        <div className="rail-column">
-          <span className="rail-muted">ASSET RISK</span>
-          <strong>0.81</strong>
-          <small>calibrated probability</small>
-        </div>
-        <div className="rail-column rail-middle">
-          <span className="rail-chip">MAINTENANCE</span>
-          <span className="rail-chip">TRAIN WINDOW</span>
-          <span className="rail-chip">SAFETY</span>
-        </div>
-        <div className="rail-column rail-right">
-          <span className="rail-muted">RECOMMENDATION</span>
-          <strong>APPROVE</strong>
-          <small>human review required</small>
-        </div>
+      <div className="rail-board" aria-label="Rail-Yojna system flow visualization">
+        <div className="rail-board-label">OPERATIONS / DECISION SUPPORT</div>
+        <div className="rail-metric rail-metric-risk"><span>ASSET RISK</span><strong>0.81</strong><small>calibrated probability</small></div>
+        <div className="rail-metric rail-metric-plan"><span>MAINTENANCE WINDOW</span><strong>12:40</strong><small>constraint checked</small></div>
+        <div className="rail-metric rail-metric-decision"><span>RECOMMENDATION</span><strong>REVIEW</strong><small>human approval</small></div>
+        <div className="rail-path"><i /><i /><i /></div>
       </div>
-      <div className="rail-flow">
-        <span>DATA</span><i />
-        <span>RISK</span><i />
-        <span>PLAN</span><i />
-        <span>DECIDE</span>
+      <div className="rail-flow"><span>DATA</span><i /><span>MODEL</span><i /><span>OPTIMIZE</span><i /><span>REVIEW</span>
       </div>
     </div>
   );
@@ -98,7 +59,7 @@ function LexiVisual() {
           <span>SCREENING</span>
           <span>04 / 08</span>
         </div>
-        <div className="lexi-title">Which pattern<br />matches the sequence?</div>
+        <div className="lexi-title">Find the pattern<br />that completes the sequence.</div>
         <div className="lexi-options" aria-hidden="true">
           <div><span /></div>
           <div><span className="shape-two" /></div>
@@ -114,23 +75,39 @@ function LexiVisual() {
 function ProjectCard({ project, reverse = false }) {
   return (
     <article className={`project ${reverse ? 'project-reverse' : ''}`}>
-      {!reverse && project.visual === 'rail' && <RailVisual />}
-      {!reverse && project.visual === 'lexi' && <LexiVisual />}
+      {!reverse && project.visual}
       <div className="project-copy">
-        <div className="project-meta"><span>{project.number}</span><span>{project.year}</span></div>
+        <div className="project-meta"><span>{project.number} / SELECTED WORK</span><span>{project.type}</span></div>
         <h3>{project.title}</h3>
         <p className="project-tagline">{project.subtitle}</p>
         <p>{project.description}</p>
+        <div className="project-details">
+          {project.details.map(([label, value]) => <p key={label}><span>{label}</span>{value}</p>)}
+        </div>
         <div className="project-tech">{project.tech}</div>
         <a className="text-link" href={project.href} target="_blank" rel="noreferrer">
-          View repository <span>↗</span>
+          View repository <span aria-hidden="true">↗</span>
         </a>
       </div>
-      {reverse && project.visual === 'lexi' && <LexiVisual />}
-      {reverse && project.visual === 'rail' && <RailVisual />}
+      {reverse && project.visual}
     </article>
   );
 }
+
+const projects = [
+  {
+    number: '01', type: 'END-TO-END SYSTEM', title: 'Rail-Yojna', subtitle: 'Planning infrastructure for railway maintenance.',
+    description: 'A decision-support system that connects risk prediction, maintenance planning, optimization, operational constraints, validation, and a React interface.',
+    details: [['Problem', 'Turn operational data and competing constraints into a plan that people can inspect.'], ['System', 'A pipeline from data and ML signals through optimization to human review.'], ['Layers', 'ML · FastAPI · OR-Tools · React'], ['Validation', 'Safety checks, constraint handling, and reviewable recommendations.']],
+    tech: 'Python · FastAPI · React · Machine Learning · OR-Tools', href: 'https://github.com/AnshXGrind/Rail-Yojna', visual: <RailVisual />,
+  },
+  {
+    number: '02', type: 'END-TO-END PRODUCT', title: 'LexiScan', subtitle: 'Learning-difficulty screening designed as an experience.',
+    description: 'An interactive learning-difficulty screening platform built with React and TypeScript, with assessment flows, results, progress, and guidance in one product.',
+    details: [['Problem', 'Make a sensitive screening flow clear, calm, and easy to move through.'], ['Product flow', 'Assessment → responses → results → progress and guidance.'], ['Implementation', 'React and TypeScript with reusable interaction patterns.'], ['UX', 'Readable layouts, focused tasks, and accessible product decisions.']],
+    tech: 'TypeScript · React · Vite · Tailwind', href: 'https://github.com/AnshXGrind/lexiscan', visual: <LexiVisual />,
+  },
+];
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -148,12 +125,10 @@ function Nav() {
       <nav className="nav-links" aria-label="Primary navigation">
         <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#stack">Stack</a>
+        <a href="#lab">Lab</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a className="nav-status" href="mailto:anshgarg2512@gmail.com">
-        <span /> Available
-      </a>
+      <a className="nav-status" href="mailto:anshgarg2512@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
     </header>
   );
 }
@@ -198,16 +173,16 @@ function App() {
       <Nav />
       <main id="top">
         <section className="hero reveal revealed">
-          <div className="eyebrow">ML · BACKEND · SYSTEMS · HACKATHONS</div>
-          <h1>I build intelligent<br /><em>systems that ship.</em></h1>
+          <div className="eyebrow">WORKS ON BACKEND SYSTEM MACHINE LEARNING SYSTEM DESIGNING AI ARCHITECture </div>
+          <h1>SAKSHAM </h1> <h1><em>GARG</em>  </h1>
           <p className="hero-copy">
-            I’m Saksham Garg — a computer science student building end-to-end products across machine learning,
-            backend engineering, system design, and emerging onchain technology.
+            I build complete software systems: from data and models to APIs, interfaces, architecture, and the details that make a product usable.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#work">Selected work <span>↓</span></a>
-            <a className="button button-light" href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a className="button button-dark" href="#work">View work <span aria-hidden="true">↓</span></a>
+            <a className="button button-light" href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
+          <div className="hero-note"><span>Currently building across</span><strong>ML / backend / systems / hackathons</strong></div>
         </section>
 
         <section className="marquee-band" aria-label="Areas of focus">
@@ -221,7 +196,7 @@ function App() {
         </section>
 
         <section id="work" className="section reveal">
-          <SectionHead number="01" title="Selected work" copy="Two complete builds. Different problems. The same obsession with making the whole system work." />
+          <SectionHead number="01" title="Selected work" copy="Two complete builds, each treated as a system rather than a collection of screens." />
           <div className="projects">
             <ProjectCard project={projects[0]} />
             <ProjectCard project={projects[1]} reverse />
@@ -232,43 +207,40 @@ function App() {
           <SectionHead number="02" title="About" />
           <div className="about-grid">
             <p className="about-lead">
-              I like the layer underneath the interface: how data moves, how services fail, where state lives,
-              how models behave, and how all of it becomes one coherent product.
+              I’m a computer science student interested in the layer underneath the interface: how data moves, how services fail, where state lives, and how models become useful products.
             </p>
             <div className="about-notes">
-              <p><span>Currently</span> Deepening ML, backend engineering and system design.</p>
-              <p><span>Exploring</span> Distributed systems, LLM systems, Ethereum, smart contracts and AI agents.</p>
-              <p><span>Approach</span> Understand → design → build → validate → ship.</p>
+              <p><span>What I enjoy</span> Architecture, data flow, APIs, reliability, and shipping the whole thing.</p>
+              <p><span>How I work</span> Understand → design → build → validate → ship.</p>
+              <p><span>Why hackathons matter</span> They make the feedback loop short and the system boundaries visible.</p>
             </div>
           </div>
         </section>
 
-        <section id="stack" className="section section-tight reveal">
-          <SectionHead number="03" title="Stack" copy="The tools I reach for when an idea needs to become a working system." />
-          <div className="stack-list">
-            {stack.map(([label, value]) => (
-              <div className="stack-row" key={label}>
-                <span>{label}</span>
-                <strong>{value}</strong>
-              </div>
-            ))}
+        <section className="section section-tight engineering reveal">
+          <SectionHead number="03" title="Engineering" copy="Areas I’m actively building depth in, through projects and practice." />
+          <div className="engineering-list">
+            {focus.map((item, index) => <div key={item}><span>0{index + 1}</span><strong>{item}</strong><i aria-hidden="true">↗</i></div>)}
           </div>
         </section>
 
-        <section className="section section-tight reveal">
-          <SectionHead number="04" title="Now" copy="What’s next is deliberately simple." />
-          <div className="now-grid">
-            <div className="now-item"><span>01</span><p>Get stronger at system design and backend architecture.</p></div>
-            <div className="now-item"><span>02</span><p>Build better AI systems instead of isolated ML demos.</p></div>
-            <div className="now-item"><span>03</span><p>Take that engineering discipline into onchain products and hackathons.</p></div>
+        <section id="lab" className="section section-tight reveal">
+          <SectionHead number="04" title="Lab" copy="Smaller experiments and learning threads. Useful context, not a trophy shelf." />
+          <div className="lab-list">
+            {['RAG experiments', 'ML notebooks', 'Computer vision experiments', 'Small web products'].map((item, index) => <a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer" key={item}><span>0{index + 1}</span><strong>{item}</strong><i aria-hidden="true">↗</i></a>)}
           </div>
+        </section>
+
+        <section className="section section-tight now-section reveal">
+          <SectionHead number="05" title="Now" copy="A short list of what I’m improving next." />
+          <div className="now-grid">{now.map((item, index) => <div className="now-item" key={item}><span>0{index + 1}</span><p>{item}</p></div>)}</div>
         </section>
 
         <section id="contact" className="contact reveal">
           <div className="contact-inner">
-            <div className="section-kicker">05</div>
-            <h2>Let’s build<br /><em>something real.</em></h2>
-            <p>For collaborations, hackathons, ideas, or just a good technical conversation.</p>
+            <div className="section-kicker">06 / CONTACT</div>
+            <h2>Have a project<br /><em>or want to build something?</em></h2>
+            <p>Open to thoughtful collaborations, hackathons, and conversations about building useful systems.</p>
             <a className="contact-mail" href="mailto:anshgarg2512@gmail.com">anshgarg2512@gmail.com <span>↗</span></a>
             <div className="contact-links">
               <a href="https://github.com/AnshXGrind" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -280,7 +252,8 @@ function App() {
       </main>
       <footer className="footer">
         <span>© {new Date().getFullYear()} Saksham Garg</span>
-        <span>Built with React + Vite</span>
+       <span style="font-family: 'Orbitron', sans-serif; color: blue;">Velarix</span>
+ 
         <a href="#top">Back to top ↑</a>
       </footer>
     </div>
