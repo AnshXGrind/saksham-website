@@ -1,16 +1,23 @@
-# Ansh Portfolio
+# Ansh Portfolio — React + Vite
 
 Minimal personal portfolio for Saksham Garg / AnshXGrind.
 
 ## Run locally
 
 ```bash
-cd ansh-portfolio
-python3 -m http.server 3000
+npm install
+npm run dev
 ```
 
-Then open http://localhost:3000
+Open the local Vite URL shown in the terminal.
+
+## Production build
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Deploy
 
-This is a static site and can be deployed directly to Vercel, Netlify, GitHub Pages, or any static host.
+Works with Vercel, Netlify, GitHub Pages, or any static host.
