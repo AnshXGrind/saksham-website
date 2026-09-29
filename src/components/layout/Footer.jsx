@@ -1,0 +1,5 @@
+import { site } from '../../data/site';
+
+export default function Footer() {
+  return <footer className="footer"><span>© {new Date().getFullYear()} {site.name}</span><span className="signature">{site.signature}</span><a href="#top">Back to top ↑</a></footer>;
+}

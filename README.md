@@ -1,6 +1,6 @@
-# Ansh Portfolio — React + Vite
+# Saksham Garg portfolio
 
-Minimal personal portfolio for Saksham Garg / AnshXGrind.
+React + Vite portfolio for Saksham Garg, focused on machine learning, backend engineering, system design, software engineering, and hackathons.
 
 ## Run locally
 
@@ -18,6 +18,3 @@ npm run build
 npm run preview
 ```
 
-## Deploy
-
-Works with Vercel, Netlify, GitHub Pages, or any static host.
